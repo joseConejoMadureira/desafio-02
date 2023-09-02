@@ -11,7 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('pedidos', function (Blueprint $table) {
+            $table->id("id_pedido");
+            $table->date("dt_pedido");
+        });
+
     }
 
     /**
@@ -19,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('pedidos');
     }
 };
