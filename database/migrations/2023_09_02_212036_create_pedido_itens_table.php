@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pedido_itens', function (Blueprint $table) {
             $table->id("id_pedido_item");
-            $table->string("qt_produto",60);
+            $table->integer("qt_produto");
         });
 
     }
