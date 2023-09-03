@@ -19,8 +19,12 @@ class PedidoController extends Controller
                                               ->select('produto_grupos.nm_produto_grupo')
                                               ->orderBy('pedido_itens.qt_produto','desc')
                                               ->take(5)
-                                             ->get()
-                                             ;
+                                              ->get()
+                                              ->unique("nm_produto_grupo");
+
+
+
+
 
 
 
