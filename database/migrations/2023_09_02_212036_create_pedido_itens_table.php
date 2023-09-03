@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pedido_items', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('pedido_itens', function (Blueprint $table) {
+            $table->id("id_pedido_item");
+            $table->string("qt_produto",60);
         });
+
     }
 
     /**
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pedido_items');
+        Schema::dropIfExists('pedido_itens');
     }
 };
