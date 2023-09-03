@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    {{ $gruposMaiorVenda }}
+    {{ $gruposMaiorVenda  }}
 </body>
 
 </html>
