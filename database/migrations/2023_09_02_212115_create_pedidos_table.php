@@ -18,7 +18,7 @@ return new class extends Migration
         });
         Schema::table('pedido_itens', function(Blueprint $table) {
             $table->unsignedBigInteger('id_pedido');
-            $table->foreign('id_pedido')->references('id_pedido')->on('pedidos');
+            $table->foreign('id_pedido')->references('id_pedido')->on('pedidos')->onDelete('cascade');
         });
     }
 
