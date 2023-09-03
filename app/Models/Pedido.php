@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+
 }
