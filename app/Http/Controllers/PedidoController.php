@@ -11,7 +11,6 @@ class PedidoController extends Controller
 
 
         $gruposMaiorVenda = PedidoItem::join('pedidos', 'pedido_itens.id_pedido', '=', 'pedidos.id_pedido')
-
                                               ->join('produtos', 'pedido_itens.id_produto', '=', 'produtos.id_produto')
                                               ->join('produto_grupos', 'produtos.id_produto_grupo', '=', 'produto_grupos.id_produto_grupo')
                                               ->whereYear('pedidos.dt_pedido', '=', 2023)
@@ -21,12 +20,6 @@ class PedidoController extends Controller
                                               ->take(5)
                                               ->get()
                                               ->unique("nm_produto_grupo");
-
-
-
-
-
-
 
         return view ('gruposMaiorVenda')->with('gruposMaiorVenda',$gruposMaiorVenda);
     }
