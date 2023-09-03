@@ -20,7 +20,7 @@ class PedidoController extends Controller
                                               ->orderBy('pedido_itens.qt_produto','desc')
                                               ->take(5)
                                              ->get()
-                                             ->unique();
+                                             ;
 
 
 
