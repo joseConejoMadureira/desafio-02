@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    {{ print_r($gruposMaiorVenda) }}
+    {{ $gruposMaiorVenda }}
 </body>
 
 </html>

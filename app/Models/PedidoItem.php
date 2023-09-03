@@ -9,5 +9,6 @@ class PedidoItem extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected  $table = 'pedido_itens';
 
 }
