@@ -20,3 +20,4 @@ Route::get('/idoso', 'App\Http\Controllers\ClienteController@idoso');
 Route::get('/pedidos', 'App\Http\Controllers\PedidoController@pedidos');
 Route::get('/excluirPedido/{id}','App\Http\Controllers\PedidoController@excluirPedido');
 Route::get('/produtos', 'App\Http\Controllers\ProdutoController@produtos');
+Route::get('/cadastroProduto', 'App\Http\Controllers\ProdutoController@cadastroProduto');
