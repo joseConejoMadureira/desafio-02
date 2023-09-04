@@ -27,18 +27,16 @@ class PedidoController extends Controller
     function maiorVenda() {
 
 
-        $gruposMaiorVenda = PedidoItem::join('pedidos', 'pedido_itens.id_pedido', '=', 'pedidos.id_pedido')
+        $maiorVenda = PedidoItem::join('pedidos', 'pedido_itens.id_pedido', '=', 'pedidos.id_pedido')
                                               ->join('produtos', 'pedido_itens.id_produto', '=', 'produtos.id_produto')
                                               ->join('produto_grupos', 'produtos.id_produto_grupo', '=', 'produto_grupos.id_produto_grupo')
                                               ->whereYear('pedidos.dt_pedido', '=', 2023)
-                                              ->whereMonth('pedidos.dt_pedido', '=', 8)
-                                              ->select('produto_grupos.nm_produto_grupo')
+                                              ->select('pedidos.dt_pedido')
                                               ->orderBy('pedido_itens.qt_produto','desc')
-                                              ->take(5)
                                               ->get()
-                                              ->unique("nm_produto_grupo");
+                                              ->unique("pedidos.dt_pedido");
 
-        return view ('maiorVenda')->with('gruposMaiorVenda',$gruposMaiorVenda);
+        return view ('maiorVenda')->with('maiorVenda',$maiorVenda);
     }
 
 }
