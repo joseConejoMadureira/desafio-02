@@ -15,4 +15,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/gruposMaiorVenda', 'App\Http\Controllers\PedidoController@gruposMaiorVenda');
-Route::get('/maiorVenda', 'App\Http\Controllers\PedidoController@maiorVenda');

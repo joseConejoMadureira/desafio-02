@@ -24,11 +24,6 @@ class PedidoController extends Controller
         return view ('gruposMaiorVenda')->with('gruposMaiorVenda',$gruposMaiorVenda);
     }
 
-    function maiorVenda() {
 
-        $gruposMaiorVenda = array ('a' => 'apple', 'b' => 'banana', 'c' => array ('x', 'y', 'z'));
-
-        return view ('gruposMaiorVenda')->with('gruposMaiorVenda',$gruposMaiorVenda);
-    }
 
 }
