@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedido;
 use App\Models\PedidoItem;
 use Illuminate\Http\Request;
 
@@ -38,5 +39,11 @@ class PedidoController extends Controller
 
         return view ('maiorVenda')->with('maiorVenda',$maiorVenda);
     }
+    function pedidos() {
 
+
+        $pedidos = Pedido::all();
+
+        return view ('pedidos')->with('pedidos',$pedidos);
+    }
 }
