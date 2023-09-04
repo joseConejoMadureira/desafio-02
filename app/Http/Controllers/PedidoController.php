@@ -41,16 +41,13 @@ class PedidoController extends Controller
     }
     function pedidos() {
 
-
         $pedidos = Pedido::all();
 
         return view ('pedidos')->with('pedidos',$pedidos);
     }
     function excluirPedido() {
 
-
         $id = request('id', 0);
-
         $pedido = Pedido::where('id_pedido', $id);
         $pedido->delete();
 
