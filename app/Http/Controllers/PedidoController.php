@@ -18,19 +18,18 @@ class PedidoController extends Controller
                                               ->whereYear('pedidos.dt_pedido', '=', 2023)
                                               ->whereMonth('pedidos.dt_pedido', '=', 8)
                                               ->select('produto_grupos.nm_produto_grupo','pedido_itens.qt_produto')
-                                              //->orderBy('pedido_itens.qt_produto','desc')
-                                              //->take(5)
                                               ->get();
-                                              //->unique("nm_produto_grupo");
+
         $listaProdutoGrupo = array();
 
         foreach ($produtoGrupo as $value) {
 
             $listaProdutoGrupo[$value]['qtd'] = $gruposMaiorVenda->where('nm_produto_grupo',$value)->sum('qt_produto');
         }
-       // $listaProdutoGrupo;
+
         $listaProdutoGrupo = collect($listaProdutoGrupo);
-        $listaProdutoGrupo =   $listaProdutoGrupo->sortByDesc('qtd')->take(5);
+        $listaProdutoGrupo =   $listaProdutoGrupo->sortByDesc('qtd')
+                                                 ->take(5);
 
         return view ('gruposMaiorVenda')->with('listaProdutoGrupo',$listaProdutoGrupo);
     }
