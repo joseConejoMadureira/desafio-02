@@ -22,19 +22,17 @@ class PedidoController extends Controller
                                               //->take(5)
                                               ->get();
                                               //->unique("nm_produto_grupo");
-
-                 //$gruposMaiorVenda  =
         $listaProdutoGrupo = array();
 
-        //$array[$produtoGrupo[0]]['qtd'] =1;
         foreach ($produtoGrupo as $value) {
-
 
             $listaProdutoGrupo[$value]['qtd'] = $gruposMaiorVenda->where('nm_produto_grupo',$value)->sum('qt_produto');
         }
+       // $listaProdutoGrupo;
+        $listaProdutoGrupo = collect($listaProdutoGrupo);
+        $listaProdutoGrupo =   $listaProdutoGrupo->sortByDesc('qtd')->take(5);
 
-        dd($listaProdutoGrupo);
-        return view ('gruposMaiorVenda')->with('gruposMaiorVenda',$gruposMaiorVenda);
+        return view ('gruposMaiorVenda')->with('listaProdutoGrupo',$listaProdutoGrupo);
     }
 
     function maiorVenda() {

@@ -1,6 +1,7 @@
 <html>
 
 <body>
+
     <table class="ui celled table">
         <thead>
             <tr>
@@ -8,10 +9,10 @@
 
             </tr>
         </thead>
-        @foreach ($gruposMaiorVenda as $value)
+        @foreach ($listaProdutoGrupo as $key => $value)
             <tbody>
 
-                <td>{{ $value->nm_produto_grupo }}</td>
+                <td>{{ $key }}</td>
                 </tr>
             </tbody>
         @endforeach
