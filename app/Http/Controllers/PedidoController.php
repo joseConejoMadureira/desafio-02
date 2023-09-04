@@ -46,4 +46,14 @@ class PedidoController extends Controller
 
         return view ('pedidos')->with('pedidos',$pedidos);
     }
+    function excluirPedido() {
+
+
+        $id = request('id', 0);
+
+        $pedido = Pedido::where('id_pedido', $id);
+        $pedido->delete();
+
+        return redirect('/pedidos');
+    }
 }

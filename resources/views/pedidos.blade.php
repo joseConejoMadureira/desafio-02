@@ -12,6 +12,7 @@
             <tbody>
 
                 <td>{{ $value->id_pedido }}</td>
+                <td><a href="/excluirPedido/{{ $value->id_pedido }}">Excluir pedido e seus respectivos itens</a></td>
                 </tr>
             </tbody>
         @endforeach

@@ -18,4 +18,5 @@ Route::get('/gruposMaiorVenda', 'App\Http\Controllers\PedidoController@gruposMai
 Route::get('/maiorVenda', 'App\Http\Controllers\PedidoController@maiorVenda');
 Route::get('/idoso', 'App\Http\Controllers\ClienteController@idoso');
 Route::get('/pedidos', 'App\Http\Controllers\PedidoController@pedidos');
+Route::get('/excluirPedido/{id}','App\Http\Controllers\PedidoController@excluirPedido');
 
