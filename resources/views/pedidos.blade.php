@@ -4,14 +4,14 @@
     <table class="ui celled table">
         <thead>
             <tr>
-                <th>Pedidos</th>
+                <th>id_pedido</th>
 
             </tr>
         </thead>
         @foreach ($pedidos as $value)
             <tbody>
 
-                <td>{{ $value }}</td>
+                <td>{{ $value->id_pedido }}</td>
                 </tr>
             </tbody>
         @endforeach
