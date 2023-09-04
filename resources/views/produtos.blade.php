@@ -1,8 +1,6 @@
 <html>
 
 <body>
-    {{ $produto_grupo }}
-
     <form action="/cadastroProduto">
 
         <label>Nome Produto</label>
