@@ -11,7 +11,6 @@ class ClienteController extends Controller
 
         Cliente::where('dt_nascimento' ,'<=', '1953-09-3')->update(['nm_cliente'=>'idoso']);
 
-
         return redirect('/');
     }
 
