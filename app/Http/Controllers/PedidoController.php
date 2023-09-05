@@ -41,10 +41,12 @@ class PedidoController extends Controller
                                               ->join('produtos', 'pedido_itens.id_produto', '=', 'produtos.id_produto')
                                               ->join('produto_grupos', 'produtos.id_produto_grupo', '=', 'produto_grupos.id_produto_grupo')
                                               ->whereYear('pedidos.dt_pedido', '=', 2023)
-                                              ->select('pedidos.dt_pedido')
-                                              ->orderBy('pedido_itens.qt_produto','desc')
-                                              ->get()
-                                              ->unique("pedidos.dt_pedido");
+                                              ->selectRaw('sum(pedido_itens.qt_produto) as qtd,pedidos.dt_pedido')
+                                              ->groupBy('pedidos.dt_pedido')
+                                              ->orderBy('qtd','desc')
+                                              ->get();
+
+        die($maiorVenda);
 
         return view ('maiorVenda')->with('maiorVenda',$maiorVenda);
     }
