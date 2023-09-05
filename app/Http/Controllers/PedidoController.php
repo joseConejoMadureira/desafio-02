@@ -46,8 +46,6 @@ class PedidoController extends Controller
                                               ->orderBy('qtd','desc')
                                               ->get();
 
-        die($maiorVenda);
-
         return view ('maiorVenda')->with('maiorVenda',$maiorVenda);
     }
     function pedidos() {
