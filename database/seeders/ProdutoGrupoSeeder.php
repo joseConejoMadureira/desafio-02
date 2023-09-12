@@ -13,31 +13,30 @@ class ProdutoGrupoSeeder extends Seeder
     {
         ProdutoGrupo::insert([
             [
-                'nm_produto_grupo' => 'console',
+                'nm_produto_grupo' => 'console'
 
             ],
             [
-                'nm_produto_grupo' => 'celulares',
+                'nm_produto_grupo' => 'celulares'
 
             ],
             [
-                'nm_produto_grupo' => 'moveis',
+                'nm_produto_grupo' => 'moveis'
 
             ],
             [
-                'nm_produto_grupo' => 'eletrodomesticos',
+                'nm_produto_grupo' => 'eletrodomesticos'
+            ],
+            [
+                'nm_produto_grupo' => 'roupas'
 
             ],
             [
-                'nm_produto_grupo' => 'roupas',
+                'nm_produto_grupo' => 'acessorios'
 
             ],
             [
-                'nm_produto_grupo' => 'acessorios',
-
-            ],
-            [
-                'nm_produto_grupo' => 'calcados',
+                'nm_produto_grupo' => 'calcados'
 
             ]
         ]);
