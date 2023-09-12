@@ -52,46 +52,39 @@ class PedidoSeeder extends Seeder
 
         ]);
 
-        /*
+        // 4) Selecione os 5 grupos com maior venda em agosto 23;
         Pedido::insert([
             [
-                'dt_pedido' => '2023-07-01',
+                'dt_pedido' => '2023-08-01',
                 'id_cliente' => 6,
-
-
             ],
             [
-                'dt_pedido' => '2023-07-02',
+                'dt_pedido' => '2023-08-02',
                 'id_cliente' => 6,
-
-
             ],
             [
-                'dt_pedido' => '2023-07-03',
+                'dt_pedido' => '2023-08-03',
                 'id_cliente' => 6,
-
-
             ],
             [
-                'dt_pedido' => '2023-07-04',
+                'dt_pedido' => '2023-08-04',
                 'id_cliente' => 6,
-
-
             ],
             [
-                'dt_pedido' => '2023-07-05',
+                'dt_pedido' => '2023-08-05',
                 'id_cliente' => 6,
-
-
             ],
             [
-                'dt_pedido' => '2023-07-06',
+                'dt_pedido' => '2023-08-06',
                 'id_cliente' => 6,
-
-
+            ],
+            [
+                'dt_pedido' => '2023-08-07',
+                'id_cliente' => 6,
             ]
 
+
         ]);
-        */
+
     }
 }
