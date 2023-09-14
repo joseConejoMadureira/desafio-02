@@ -30,14 +30,14 @@ docker-compose up -d
 ```
 docker-compose exec web cp .env.example .env
 ```
-###  chave de app laravel
-```
-docker-compose exec web php artisan key:generate 
-```
 
 ### instalação das dependencias php 
 ```
 docker-compose exec web composer install
+```
+###  chave de app laravel
+```
+docker-compose exec web php artisan key:generate 
 ```
 ### instalação das migrates 
 ```
