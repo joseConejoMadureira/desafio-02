@@ -7,6 +7,7 @@ Desafio técnico que utiliza  laravel e diversos recursos eloquent:
   <li>groupBy</li>
   <li>orderBy</li>
   <li>orderBy</li>
+  <li>cascade</li>
 </ul>
 
 ### clone do repostorio do projeto DOCKER 
