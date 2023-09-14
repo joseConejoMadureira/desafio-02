@@ -17,7 +17,6 @@ class PedidoController extends Controller
                                               ->join('produto_grupos', 'produtos.id_produto_grupo', '=', 'produto_grupos.id_produto_grupo')
                                               ->whereYear('pedidos.dt_pedido', '=', 2023)
                                               ->whereMonth('pedidos.dt_pedido', '=', 8)
-                                              //->select('produto_grupos.nm_produto_grupo','pedido_itens.qt_produto')
                                               ->selectRaw('sum(pedido_itens.qt_produto) as qtd,produto_grupos.nm_produto_grupo')
                                               ->groupBy('produto_grupos.nm_produto_grupo')
                                               ->orderBy('qtd','desc')
