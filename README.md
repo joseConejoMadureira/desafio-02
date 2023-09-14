@@ -43,7 +43,7 @@ docker-compose exec web php artisan key:generate
 ```
 docker-compose exec web php artisan migrate
 ```
-### instalação das migrates 
+### instalação das seeder 
 ```
 docker-compose exec web php artisan db:seed
 ```
