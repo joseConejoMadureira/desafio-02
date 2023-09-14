@@ -2,17 +2,13 @@
 Desafio técnico que utiliza  laravel e diversos recursos eloquent:
 
 <ul>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-  <li>Fourth item</li>
+  <li>migration</li>
+  <li>seeder</li>
+  <li>groupBy</li>
+  <li>orderBy</li>
+  <li>orderBy</li>
 </ul>
 
-migration
-seeder
-join
-groupBy
-orderBy
 ### clone do repostorio do projeto DOCKER 
 ```
 git clone https://github.com/joseConejoMadureira/desafio-02
