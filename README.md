@@ -9,12 +9,12 @@ Desafio técnico que utiliza  laravel e diversos recursos eloquent:
   <li>cascade</li>
 </ul>
 
-### clone do repostorio do projeto DOCKER 
+### clone do repostorio do projeto desafio-02 
 ```
 git clone https://github.com/joseConejoMadureira/desafio-02
 ```
 
-### diretorio  do projeto laravue
+### diretorio  do projeto desafio-02
 ```
 cd  desafio-02
 ```
