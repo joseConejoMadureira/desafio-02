@@ -26,14 +26,13 @@ sudo su
 ```
 docker-compose up -d
 ```
-### copia  env.example (arquivo de configuração) 
-```
-docker-compose exec web cp .env.example .env
-```
-
 ### instalação das dependencias php 
 ```
 docker-compose exec web composer install
+```
+### copia  env.example (arquivo de configuração) 
+```
+docker-compose exec web cp .env.example .env
 ```
 ###  chave de app laravel
 ```
