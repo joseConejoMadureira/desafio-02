@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use App\Models\PedidoItem;
-use App\Models\ProdutoGrupo;
 use Illuminate\Http\Request;
 
 class PedidoController extends Controller
